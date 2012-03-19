@@ -1,0 +1,63 @@
+module increase_speed
+(
+  // Clock Input (50 MHz)
+  input  CLOCK_50,
+  //  Push Buttons
+  input  [3:0]  KEY,
+  //  DPDT Switches 
+  input  [17:0]  SW,
+  //  7-SEG Displays
+  output  [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7,
+  //  LEDs
+  output  [8:0]  LEDG,  //  LED Green[8:0]
+  output  [17:0]  LEDR //  LED Red[17:0]
+);
+
+// Connect dip switches to red LEDs
+assign LEDR[17:0] = SW[17:0];
+
+// turn off green LEDs
+assign LEDG[8:0] = 0;
+
+reg [3:0] A;
+reg [3:0] OVERFLOW;
+
+// map to 7-segment displays
+hex_7seg dsp0(OVERFLOW,HEX7);
+hex_7seg dsp1(A[3:0],HEX6);
+
+wire [6:0] blank = ~7'h00; 
+
+// blank remaining digits
+assign HEX0 = blank;
+assign HEX1 = blank;
+assign HEX2 = blank;
+assign HEX3 = blank;
+assign HEX4 = blank;
+assign HEX5 = blank;
+
+// control (set) value of A, signal with KEY3
+always @( negedge KEY[3]  )
+	if( KEY[3] ) begin
+		if (A<9) begin
+			 A <= A + 1'b1;
+			 OVERFLOW <= OVERFLOW + 1'b0;
+		end
+		else begin
+			 A <= 4'b0000;
+			 OVERFLOW <= OVERFLOW + 1'b1;
+	end
+end/*
+else if( ~KEY[2]) begin
+	if (A>0) begin
+		 A <= A - 1'b1;
+		 OVERFLOW <= OVERFLOW - 1'b0;
+	end
+	else begin
+		 A <= 4'b1001;
+		 OVERFLOW <= OVERFLOW - 1'b1;
+	end
+end*/
+
+
+endmodule

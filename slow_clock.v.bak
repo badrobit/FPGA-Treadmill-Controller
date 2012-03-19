@@ -1,0 +1,16 @@
+module slow_clock
+(
+	input Clk, 
+	input [3:0]MaxCnt, 
+	output reg [3:0]Cnt
+	);
+
+always @(posedge Clk)
+begin
+	if (Cnt < MaxCnt)
+		Cnt <= Cnt+1;
+	else
+		Cnt <= 0;
+	end
+
+endmodule

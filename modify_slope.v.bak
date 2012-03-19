@@ -1,0 +1,33 @@
+module modify_slope( CLOCK_50, KEY, slope1, slope2 );
+
+input wire CLOCK_50; 
+input wire [3:0] KEY; 
+output reg [3:0] speed1, speed2;
+
+reg old_key2; 
+reg old_key3;
+
+always @( posedge CLOCK_50 ) begin
+	if( old_key3 && !KEY[3] ) begin
+		if( speed2 < 9 ) begin
+			 speed2 = speed2 + 1;
+		end
+		else begin
+			 speed2 = 0;
+			 speed1 = speed1 + 1;
+		end
+	end
+	else if( old_key2 && !KEY[2] ) begin
+		if( speed2 > 0 ) begin
+			 speed2 = speed2 - 1;
+		end
+		else begin
+			 speed2 = 9;
+			 speed1 = speed1 - 1;
+		end
+	end
+	old_key3 = KEY[3];
+	old_key2 = KEY[2];
+end
+
+endmodule

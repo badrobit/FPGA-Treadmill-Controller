@@ -1,0 +1,9 @@
+treadmill
+f,output,user_entered
+f~0,comb,compiler_generated
+x1,input,user_entered
+x2,input,user_entered
+~ASDO~,input,compiler_generated
+~LVDS150p/nCEO~,output,compiler_generated
+~nCSO~,input,compiler_generated
+,hierarchy,user_entered

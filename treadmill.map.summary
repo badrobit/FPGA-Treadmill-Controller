@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Feb 12 23:22:54 2012
+Quartus II Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
+Revision Name : treadmill
+Top-level Entity Name : treadmill
+Family : Cyclone II
+Total logic elements : 291
+    Total combinational functions : 276
+    Dedicated logic registers : 154
+Total registers : 154
+Total pins : 107
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

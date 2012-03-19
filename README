@@ -1,0 +1,11 @@
+This is a controller for a treadmill system that is written in Verilog HDL. It provides the following functionality. 
+
+- Increment / Decrement Speed.
+- Increment / Decrement Angle.
+- Keep Track of time. 
+- Monitor Speed. 
+
+This project is provided AS-IS. 
+
+Mat Roscoe
+mat.roscoe@unb.ca

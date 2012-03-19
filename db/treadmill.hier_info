@@ -1,0 +1,386 @@
+|treadmill
+CLOCK_50 => CLOCK_50.IN5
+CLOCK_27 => ~NO_FANOUT~
+KEY[0] => KEY[0].IN2
+KEY[1] => KEY[1].IN2
+KEY[2] => KEY[2].IN2
+KEY[3] => KEY[3].IN2
+SW[0] => reset.IN3
+SW[1] => ~NO_FANOUT~
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => display4.OUTPUTSELECT
+SW[16] => display4.OUTPUTSELECT
+SW[16] => display4.OUTPUTSELECT
+SW[16] => display4.OUTPUTSELECT
+SW[16] => display5.OUTPUTSELECT
+SW[16] => display5.OUTPUTSELECT
+SW[16] => display5.OUTPUTSELECT
+SW[16] => display5.OUTPUTSELECT
+SW[16] => display6.OUTPUTSELECT
+SW[16] => display6.OUTPUTSELECT
+SW[16] => display6.OUTPUTSELECT
+SW[16] => display6.OUTPUTSELECT
+SW[16] => display7.OUTPUTSELECT
+SW[16] => display7.OUTPUTSELECT
+SW[16] => display7.OUTPUTSELECT
+SW[16] => display7.OUTPUTSELECT
+SW[16] => display6.OUTPUTSELECT
+SW[16] => display6.OUTPUTSELECT
+SW[16] => display6.OUTPUTSELECT
+SW[16] => display6.OUTPUTSELECT
+SW[16] => display7.OUTPUTSELECT
+SW[16] => display7.OUTPUTSELECT
+SW[16] => display7.OUTPUTSELECT
+SW[16] => display7.OUTPUTSELECT
+SW[16] => display4.OUTPUTSELECT
+SW[16] => display4.OUTPUTSELECT
+SW[16] => display4.OUTPUTSELECT
+SW[16] => display4.OUTPUTSELECT
+SW[16] => display5.OUTPUTSELECT
+SW[16] => display5.OUTPUTSELECT
+SW[16] => display5.OUTPUTSELECT
+SW[16] => display5.OUTPUTSELECT
+SW[17] => display0.OUTPUTSELECT
+SW[17] => display0.OUTPUTSELECT
+SW[17] => display0.OUTPUTSELECT
+SW[17] => display0.OUTPUTSELECT
+SW[17] => display1.OUTPUTSELECT
+SW[17] => display1.OUTPUTSELECT
+SW[17] => display1.OUTPUTSELECT
+SW[17] => display1.OUTPUTSELECT
+SW[17] => display2.OUTPUTSELECT
+SW[17] => display2.OUTPUTSELECT
+SW[17] => display2.OUTPUTSELECT
+SW[17] => display2.OUTPUTSELECT
+SW[17] => display3.OUTPUTSELECT
+SW[17] => display3.OUTPUTSELECT
+SW[17] => display3.OUTPUTSELECT
+SW[17] => display3.OUTPUTSELECT
+SW[17] => display0.OUTPUTSELECT
+SW[17] => display0.OUTPUTSELECT
+SW[17] => display0.OUTPUTSELECT
+SW[17] => display0.OUTPUTSELECT
+SW[17] => display1.OUTPUTSELECT
+SW[17] => display1.OUTPUTSELECT
+SW[17] => display1.OUTPUTSELECT
+SW[17] => display1.OUTPUTSELECT
+SW[17] => display2.OUTPUTSELECT
+SW[17] => display2.OUTPUTSELECT
+SW[17] => display2.OUTPUTSELECT
+SW[17] => display2.OUTPUTSELECT
+SW[17] => display3.OUTPUTSELECT
+SW[17] => display3.OUTPUTSELECT
+SW[17] => display3.OUTPUTSELECT
+SW[17] => display3.OUTPUTSELECT
+
+
+|treadmill|slow_clock:s_clock
+fast_clock => slow_clock~reg0.CLK
+fast_clock => R[0].CLK
+fast_clock => R[1].CLK
+fast_clock => R[2].CLK
+fast_clock => R[3].CLK
+fast_clock => R[4].CLK
+fast_clock => R[5].CLK
+fast_clock => R[6].CLK
+fast_clock => R[7].CLK
+fast_clock => R[8].CLK
+fast_clock => R[9].CLK
+fast_clock => R[10].CLK
+fast_clock => R[11].CLK
+fast_clock => R[12].CLK
+fast_clock => R[13].CLK
+fast_clock => R[14].CLK
+fast_clock => R[15].CLK
+fast_clock => R[16].CLK
+fast_clock => R[17].CLK
+fast_clock => R[18].CLK
+fast_clock => R[19].CLK
+fast_clock => R[20].CLK
+fast_clock => R[21].CLK
+fast_clock => R[22].CLK
+fast_clock => R[23].CLK
+fast_clock => R[24].CLK
+fast_clock => R[25].CLK
+
+
+|treadmill|dist_clock:d_clock
+fast_clock => dist_clock~reg0.CLK
+fast_clock => S[0].CLK
+fast_clock => S[1].CLK
+fast_clock => S[2].CLK
+fast_clock => S[3].CLK
+fast_clock => S[4].CLK
+fast_clock => S[5].CLK
+fast_clock => S[6].CLK
+fast_clock => S[7].CLK
+fast_clock => S[8].CLK
+fast_clock => S[9].CLK
+fast_clock => S[10].CLK
+fast_clock => S[11].CLK
+fast_clock => S[12].CLK
+fast_clock => S[13].CLK
+fast_clock => S[14].CLK
+fast_clock => S[15].CLK
+fast_clock => S[16].CLK
+fast_clock => S[17].CLK
+fast_clock => S[18].CLK
+fast_clock => S[19].CLK
+fast_clock => S[20].CLK
+fast_clock => S[21].CLK
+fast_clock => S[22].CLK
+fast_clock => S[23].CLK
+fast_clock => S[24].CLK
+fast_clock => S[25].CLK
+fast_clock => S[26].CLK
+fast_clock => S[27].CLK
+fast_clock => S[28].CLK
+fast_clock => S[29].CLK
+fast_clock => S[30].CLK
+
+
+|treadmill|timer:time1
+slow_clock => minute1[0]~reg0.CLK
+slow_clock => minute1[1]~reg0.CLK
+slow_clock => minute1[2]~reg0.CLK
+slow_clock => minute1[3]~reg0.CLK
+slow_clock => minute2[0]~reg0.CLK
+slow_clock => minute2[1]~reg0.CLK
+slow_clock => minute2[2]~reg0.CLK
+slow_clock => minute2[3]~reg0.CLK
+slow_clock => second1[0]~reg0.CLK
+slow_clock => second1[1]~reg0.CLK
+slow_clock => second1[2]~reg0.CLK
+slow_clock => second1[3]~reg0.CLK
+slow_clock => second2[0]~reg0.CLK
+slow_clock => second2[1]~reg0.CLK
+slow_clock => second2[2]~reg0.CLK
+slow_clock => second2[3]~reg0.CLK
+reset => second2.OUTPUTSELECT
+reset => second2.OUTPUTSELECT
+reset => second2.OUTPUTSELECT
+reset => second2.OUTPUTSELECT
+reset => second1.OUTPUTSELECT
+reset => second1.OUTPUTSELECT
+reset => second1.OUTPUTSELECT
+reset => second1.OUTPUTSELECT
+reset => minute2.OUTPUTSELECT
+reset => minute2.OUTPUTSELECT
+reset => minute2.OUTPUTSELECT
+reset => minute2.OUTPUTSELECT
+reset => minute1.OUTPUTSELECT
+reset => minute1.OUTPUTSELECT
+reset => minute1.OUTPUTSELECT
+reset => minute1.OUTPUTSELECT
+
+
+|treadmill|distance:dist1
+clock => distance1[0]~reg0.CLK
+clock => distance1[1]~reg0.CLK
+clock => distance1[2]~reg0.CLK
+clock => distance1[3]~reg0.CLK
+clock => distance2[0]~reg0.CLK
+clock => distance2[1]~reg0.CLK
+clock => distance2[2]~reg0.CLK
+clock => distance2[3]~reg0.CLK
+clock => distance3[0]~reg0.CLK
+clock => distance3[1]~reg0.CLK
+clock => distance3[2]~reg0.CLK
+clock => distance3[3]~reg0.CLK
+speed[0] => ~NO_FANOUT~
+speed[1] => ~NO_FANOUT~
+speed[2] => ~NO_FANOUT~
+speed[3] => ~NO_FANOUT~
+speed[4] => ~NO_FANOUT~
+speed[5] => ~NO_FANOUT~
+speed[6] => ~NO_FANOUT~
+speed[7] => ~NO_FANOUT~
+
+
+|treadmill|modify_speed:speed_control
+CLOCK_50 => old_key2.CLK
+CLOCK_50 => old_key3.CLK
+CLOCK_50 => speed1[0]~reg0.CLK
+CLOCK_50 => speed1[1]~reg0.CLK
+CLOCK_50 => speed1[2]~reg0.CLK
+CLOCK_50 => speed1[3]~reg0.CLK
+CLOCK_50 => speed2[0]~reg0.CLK
+CLOCK_50 => speed2[1]~reg0.CLK
+CLOCK_50 => speed2[2]~reg0.CLK
+CLOCK_50 => speed2[3]~reg0.CLK
+CLOCK_50 => speed3[0]~reg0.CLK
+CLOCK_50 => speed3[1]~reg0.CLK
+CLOCK_50 => speed3[2]~reg0.CLK
+CLOCK_50 => speed3[3]~reg0.CLK
+CLOCK_50 => speed[0]~reg0.CLK
+CLOCK_50 => speed[1]~reg0.CLK
+CLOCK_50 => speed[2]~reg0.CLK
+CLOCK_50 => speed[3]~reg0.CLK
+CLOCK_50 => speed[4]~reg0.CLK
+CLOCK_50 => speed[5]~reg0.CLK
+CLOCK_50 => speed[6]~reg0.CLK
+CLOCK_50 => speed[7]~reg0.CLK
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+KEY[2] => always0.IN1
+KEY[2] => old_key2.DATAIN
+KEY[3] => always0.IN1
+KEY[3] => old_key3.DATAIN
+reset => speed2[3]~reg0.ENA
+reset => speed2[2]~reg0.ENA
+reset => speed2[1]~reg0.ENA
+reset => speed2[0]~reg0.ENA
+reset => speed1[3]~reg0.ENA
+reset => speed1[2]~reg0.ENA
+reset => speed1[1]~reg0.ENA
+reset => speed1[0]~reg0.ENA
+reset => old_key3.ENA
+reset => old_key2.ENA
+reset => speed3[0]~reg0.ENA
+reset => speed3[1]~reg0.ENA
+reset => speed3[2]~reg0.ENA
+reset => speed3[3]~reg0.ENA
+reset => speed[0]~reg0.ENA
+reset => speed[1]~reg0.ENA
+reset => speed[2]~reg0.ENA
+reset => speed[3]~reg0.ENA
+reset => speed[4]~reg0.ENA
+reset => speed[5]~reg0.ENA
+reset => speed[6]~reg0.ENA
+reset => speed[7]~reg0.ENA
+
+
+|treadmill|modify_slope:slope_control
+CLOCK_50 => old_key0.CLK
+CLOCK_50 => old_key1.CLK
+CLOCK_50 => slope1[0]~reg0.CLK
+CLOCK_50 => slope1[1]~reg0.CLK
+CLOCK_50 => slope1[2]~reg0.CLK
+CLOCK_50 => slope1[3]~reg0.CLK
+CLOCK_50 => slope2[0]~reg0.CLK
+CLOCK_50 => slope2[1]~reg0.CLK
+CLOCK_50 => slope2[2]~reg0.CLK
+CLOCK_50 => slope2[3]~reg0.CLK
+CLOCK_50 => slope[0]~reg0.CLK
+CLOCK_50 => slope[1]~reg0.CLK
+CLOCK_50 => slope[2]~reg0.CLK
+CLOCK_50 => slope[3]~reg0.CLK
+KEY[0] => always0.IN1
+KEY[0] => old_key0.DATAIN
+KEY[1] => always0.IN1
+KEY[1] => old_key1.DATAIN
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+reset => slope.OUTPUTSELECT
+reset => slope.OUTPUTSELECT
+reset => slope.OUTPUTSELECT
+reset => slope.OUTPUTSELECT
+reset => slope2.OUTPUTSELECT
+reset => slope2.OUTPUTSELECT
+reset => slope2.OUTPUTSELECT
+reset => slope2.OUTPUTSELECT
+reset => slope1.OUTPUTSELECT
+reset => slope1.OUTPUTSELECT
+reset => slope1.OUTPUTSELECT
+reset => slope1.OUTPUTSELECT
+reset => old_key1.ENA
+reset => old_key0.ENA
+
+
+|treadmill|motor:pmw
+clock => lights[0]~reg0.CLK
+clock => lights[1]~reg0.CLK
+clock => lights[2]~reg0.CLK
+clock => lights[3]~reg0.CLK
+clock => lights[4]~reg0.CLK
+clock => lights[5]~reg0.CLK
+clock => lights[6]~reg0.CLK
+clock => lights[7]~reg0.CLK
+clock => lights[8]~reg0.CLK
+clock => count[0].CLK
+clock => count[1].CLK
+clock => count[2].CLK
+clock => count[3].CLK
+clock => count[4].CLK
+clock => count[5].CLK
+clock => count[6].CLK
+clock => count[7].CLK
+speed[0] => LessThan0.IN8
+speed[1] => LessThan0.IN7
+speed[2] => LessThan0.IN6
+speed[3] => LessThan0.IN5
+speed[4] => LessThan0.IN4
+speed[5] => LessThan0.IN3
+speed[6] => LessThan0.IN2
+speed[7] => LessThan0.IN1
+
+
+|treadmill|hex_display:dsp0
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+
+|treadmill|hex_display:dsp1
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+
+|treadmill|hex_display:dsp2
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+
+|treadmill|hex_display:dsp3
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+
+|treadmill|hex_display:dsp4
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+
+|treadmill|hex_display:dsp5
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+
+|treadmill|hex_display:dsp6
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+
+|treadmill|hex_display:dsp7
+hex_digit[0] => Decoder0.IN3
+hex_digit[1] => Decoder0.IN2
+hex_digit[2] => Decoder0.IN1
+hex_digit[3] => Decoder0.IN0
+
+

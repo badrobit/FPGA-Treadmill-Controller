@@ -1,0 +1,26 @@
+module distance( clock, speed, lights ); 
+
+input wire clock; 
+input wire [7:0] speed; 
+
+// display a dash to sperate KM from M
+reg [3:0] dash = ~3'b1000; 
+
+always @( posedge clock ) begin
+	if( distance3 < 9 ) begin
+		distance3 = distance3 + 1;
+	end
+	else if( distance2 < 9 ) begin
+		distance3 = 0; 
+		distance2 = distance2 + 1;
+	end
+	else begin
+		if( distance1 < 1 ) begin
+			distance3 = 0; 
+			distance2 = 0;
+			distance1 = distance1 + 1;
+		 end
+	end
+end
+
+endmodule
